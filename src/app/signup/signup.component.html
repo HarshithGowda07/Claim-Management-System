@@ -1,0 +1,62 @@
+    <body>
+    <div class="login-block">
+      <h1>Sign Up</h1>
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+
+        <input type="hidden" name="Id" [value]="objservice.mdata.MId">
+
+        <label>Name</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="MName.valid"
+            [class.red-icon]="MName.invalid && MName.touched"></i>
+          <input name="MName" #MName="ngModel"   [(ngModel)]="objservice.mdata.MName" placeholder="Member name" class="form-control" required>
+
+        <label>UserName</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="Username.valid"
+          [class.red-icon]="Username.invalid && Username.touched"></i>
+          <input type="text" name="Username" #Username="ngModel"   [(ngModel)]="objservice.mdata.Username" placeholder="Username" class="form-control" required>
+
+        <label>Password</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="Password.valid"
+          [class.red-icon]="Password.invalid && Password.touched"></i>
+          <input type="password" name="Password" #Password="ngModel"   [(ngModel)]="objservice.mdata.Password" placeholder="Password" class="form-control" required>
+
+        <label>Address</label>
+          <i class="bi bi-house" aria-hidden="true" [class.green-icon]="Address.valid"
+          [class.red-icon]="Address.invalid && Address.touched"></i>
+          <input type="text" name="Address" #Address="ngModel"   [(ngModel)]="objservice.mdata.Address" placeholder="Address" class="form-control" >
+
+        <label>State</label>
+          <i class="bi bi-house" aria-hidden="true" [class.green-icon]="State.valid"
+          [class.red-icon]="State.invalid && State.touched"></i>
+          <input type="text" name="State" #State="ngModel"   [(ngModel)]="objservice.mdata.State" placeholder="State" class="form-control" >
+
+        <label>Country</label>
+          <i class="bi bi-house" aria-hidden="true" [class.green-icon]="Country.valid"
+          [class.red-icon]="Country.invalid && Country.touched"></i>
+          <input type="text" name="Country" #Country="ngModel"   [(ngModel)]="objservice.mdata.Country" placeholder="Country" class="form-control" >
+
+        <label>Email</label>
+          <i class="bi bi-envelope" aria-hidden="true" [class.green-icon]="Email.valid"
+          [class.red-icon]="Email.invalid && Email.touched"></i>
+          <input type="text" name="Email" #Email="ngModel"   [(ngModel)]="objservice.mdata.Email" placeholder="Email" class="form-control" >
+
+        <label>Contact</label>
+          <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="Phone.valid"
+          [class.red-icon]="Phone.invalid && Phone.touched"></i>
+          <input type="text" name="Phone" #Phone="ngModel"   [(ngModel)]="objservice.mdata.Phone" placeholder="Phone" class="form-control" >
+
+        <label>Date of Birth</label>
+          <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="DOB.valid"
+          [class.red-icon]="DOB.invalid && DOB.touched"></i>
+          <input type="datetime" name="DOB" #DOB="ngModel"   [(ngModel)]="objservice.mdata.DOB" placeholder="yyyy-mm-dd" class="form-control" >
+
+
+          <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid" href="HomePage"><i class="fa fa-database"></i>Sign up</button>
+      </form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+          Already have an account? <a href="login">Login here</a>
+      </p>
+    </div>
+  </body>

@@ -1,0 +1,67 @@
+
+
+
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="PId" [value]="objservice.ppData.PId">
+    <div class="login-block">
+    <div class="form-group">
+    <div class="input-group">
+    <div class="input-group-prepend">
+     <div class="input-group-text bg-white">
+
+
+     <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="PName.valid"
+      [class.red-icon]="PName.invalid && PName.touched"></i>
+     <input name="PName" #PName="ngModel"   [(ngModel)]="objservice.ppData.PName" placeholder="Plan Name" class="form-control" required>
+      </div></div>  </div>   </div>
+
+                <div class="form-group">
+                <div class="input-group">
+                <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                <i class="fa fa-diamond" aria-hidden="true" [class.green-icon]="PAmount.valid"
+                [class.red-icon]="PAmount.invalid && PAmount.touched"></i>
+                <input  type="number" name="PAmount" #PAmount="ngModel"   [(ngModel)]="objservice.ppData.PAmount" placeholder="PAmount" type="number"
+                class="form-control" required >
+                </div></div>  </div>   </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                    <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="PSTime.valid"
+                    [class.red-icon]="PSTime.invalid && PSTime.touched"></i>
+                    <input type="date" name="PSTime" #PSTime="ngModel"   [(ngModel)]="objservice.ppData.PSTime" placeholder="yyyy-mm-dd"
+                    class="form-control" required >
+                </div></div>  </div>   </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                    <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="PETime.valid"
+                    [class.red-icon]="PETime.invalid && PETime.touched"></i>
+                    <input type="date" name="PETime" #PETime="ngModel"   [(ngModel)]="objservice.ppData.PETime" placeholder="yyyy-mm-dd"
+                    class="form-control" required >
+                 </div></div>  </div>   </div>
+
+               <div class="form-group">
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                     <div class="input-group-text bg-white">
+                     <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="MrefId.valid"
+                      [class.red-icon]="MrefId.invalid && MrefId.touched"></i>
+                     <input type="number" name="MrefId" #MrefId="ngModel"   [(ngModel)]="objservice.ppData.MrefId" placeholder="MrefId"
+                     class="form-control" required >
+                </div></div>  </div>   </div>
+
+
+
+                <div class="form-group">
+                    <button class="btn btn-success btn-lg" type="submit"
+                        [disabled]="form.invalid" >
+                       <i class="fa fa-database"></i>Create/Update</button>
+                </div>
+              </div>
+</form>
+

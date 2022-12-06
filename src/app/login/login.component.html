@@ -1,0 +1,60 @@
+<!-- <form class="px-4 py-3">
+    <div class="mb-3">
+      <label for="exampleDropdownFormEmail1" class="form-label">Username</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+          Remember me
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form> -->
+  <!-- <form class="login">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </form> -->
+<!-- <body>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<div class="logo"></div>
+<div class="login-block">
+    <label>Login</label>
+    <form #form="ngForm" autocomplete="off" (submit)="checkUser(form)">
+    <input type="hidden" name="Id" [value]="objservice.mdata.MId">
+
+    <i class="fa fa-user-circle-o" aria-hidden="true" ></i>
+          <input name="user" id="user"  placeholder="Username"  required>
+
+    <i class="fa fa-user-circle-o" aria-hidden="true" ></i>
+          <input type="password" name="Pass" id="pass" placeholder="Password"  required>
+    <button>Submit</button>
+    </form>
+</div>
+</body> -->
+<body class="body">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<div class="login-block">
+<form [formGroup]="form" (submit)="submit()">
+<h1 class="h3 mb-3 fw-normal">Please Login</h1>
+
+<input type="text" formControlName="username" class="form-control" placeholder="Username" required>
+
+<input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+
+<button class="w-100 btn btn-lg btn-primary" type="submit">Sign IN</button>
+
+</form>
+</div>
+
+
+
+

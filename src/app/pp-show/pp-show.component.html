@@ -1,0 +1,32 @@
+<body class="body">
+<app-pp-reg></app-pp-reg>
+<table class="table table-hover">
+    <thead class="login-block">
+          <tr>
+            <th>Id</th>
+            <th>PlanName</th>
+            <th>Amount</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>MemberId</th>
+
+
+         </tr>
+    </thead>
+    <tbody class="login-block">
+        <tr *ngFor="let p of objSrv.ppList">
+            <td (click)="fillForm(p)">{{p.PId}}</td>
+            <td (click)="fillForm(p)">{{p.PName}}</td>
+            <td (click)="fillForm(p)">{{p.PAmount}}</td>
+            <td (click)="fillForm(p)">{{p.PSTime}}</td>
+            <td (click)="fillForm(p)">{{p.PETime}}</td>
+            <td (click)="fillForm(p)">{{p.MrefId}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
+</body>
+
+
+

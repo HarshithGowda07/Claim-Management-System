@@ -1,0 +1,29 @@
+<body class="body">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- <div class="login-block"> -->
+<table class="table table-hover">
+    <thead class="login-block">
+        <tr>
+            <th>PlanID</th>
+            <th>PlanName</th>
+            <th>PlanAmount</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Delete Claim</th>
+            <th>Edit Claim</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let p of objSrv.ppList">
+            <td>{{p.PId}}</td>
+            <td>{{p.PName}}</td>
+            <td>{{p.PAmount}}</td>
+            <td>{{p.PSTime}}</td>
+            <td>{{p.PETime}}</td>
+            <td><i class="fa fa-trash red-icon" (click)="del(p.PId)"></i></td>
+            <td><i class="fa fa-user-circle-o red-icon"><a href="update">Edit</a></i></td>
+        </tr>
+    </tbody>
+</table>
+<!-- </div> -->
+</body>
